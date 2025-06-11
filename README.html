@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Patterns Examples</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="language-buttons">
+      <button onclick="changeLanguage('en')">English</button>
+      <button onclick="changeLanguage('es')">Español</button>
+    </div>
+
+    <div id="content"></div>
+
+    <script src="translations.js"></script>
+    <script>
+      function renderContent(lang) {
+        const t = translations[lang];
+        const content = `
+          <h1>${t.title}</h1>
+          <p>${t.description}</p>
+
+          <h2>${t.prerequisites}</h2>
+          <ul>
+            ${t.prerequisitesList.map((item) => `<li>${item}</li>`).join("")}
+          </ul>
+
+          <h2>${t.installation}</h2>
+          <pre><code>${t.installationCommand}</code></pre>
+
+          <h2>${t.running}</h2>
+          <p>${t.runningDescription}</p>
+          <pre><code>${t.runningCommand}</code></pre>
+          <p>${t.runningExplanation}</p>
+
+          <h2>${t.structure}</h2>
+          <ul>
+            ${t.structureList
+              .map((item) => `<li><code>${item}</code></li>`)
+              .join("")}
+          </ul>
+
+          <h2>${t.commands}</h2>
+          <ul>
+            ${t.commandsList
+              .map((item) => `<li><code>${item}</code></li>`)
+              .join("")}
+          </ul>
+
+          <h2>Design Patterns Included</h2>
+          <ol>
+            <li>
+              <strong>Observer Pattern</strong>
+              <ul>
+                <li>Implementation: Weather Station example</li>
+                <li>Demonstrates: Subject-Observer relationship</li>
+                <li>Shows: How to implement loose coupling between objects</li>
+                <li>Location: <code>pattern/observer/observer.ts</code></li>
+              </ul>
+            </li>
+          </ol>
+          <p>More patterns will be added soon...</p>
+        `;
+        document.getElementById("content").innerHTML = content;
+      }
+
+      function changeLanguage(lang) {
+        renderContent(lang);
+      }
+
+      renderContent("en");
+    </script>
+  </body>
+</html>
