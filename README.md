@@ -25,6 +25,9 @@ make observer
 # Run Decorator Pattern example
 make decorator
 
+# Run Chain of Responsibility Pattern example
+make chain
+
 # Run other pattern examples (coming soon)
 # make singleton
 # make factory
@@ -43,6 +46,7 @@ Each pattern has its own make command to run its example:
 
 - `make observer`: Runs the Observer pattern example (Weather Station)
 - `make decorator`: Runs the Decorator pattern example (Coffee Shop)
+- `make chain`: Runs the Chain of Responsibility pattern example (Support System)
 - More patterns coming soon...
 
 ## Design Patterns Included
@@ -64,5 +68,17 @@ Each pattern has its own make command to run its example:
      - Multiple decorators (Milk, Sugar, Whipped Cream)
      - Dynamic cost calculation
      - Flexible description building
+
+3. **Chain of Responsibility Pattern**
+   - Implementation: Support System example
+   - Demonstrates: Request handling chain
+   - Shows: How to create a chain of handlers for processing requests
+   - Location: `pattern/chain-of-responsibility/support.ts`
+   - Example: `pattern/chain-of-responsibility/example.ts`
+   - Features:
+     - Multiple support handlers (Technical, Billing, General)
+     - Priority-based request handling
+     - Flexible chain configuration
+     - Request type validation
 
 More patterns will be added soon... 
