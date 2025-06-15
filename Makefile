@@ -9,6 +9,9 @@ decorator:
 chain:
 	npx ts-node pattern/chain-of-responsibility/example.ts
 
+strategy:
+	npx ts-node pattern/strategy/example.ts
+
 clean:
 	rm -rf dist/ 
 
