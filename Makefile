@@ -12,6 +12,9 @@ chain:
 strategy:
 	npx ts-node pattern/strategy/example.ts
 
+factory:
+	npx ts-node pattern/factory-method/example.ts
+
 clean:
 	rm -rf dist/ 
 

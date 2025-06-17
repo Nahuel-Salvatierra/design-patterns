@@ -31,10 +31,8 @@ make chain
 # Run Strategy Pattern example
 make strategy
 
-# Run other pattern examples (coming soon)
-# make singleton
-# make factory
-# etc...
+# Run Factory Method Pattern example
+make factory
 ```
 
 ## Project Structure
@@ -50,7 +48,7 @@ Each pattern has its own make command to run its example:
 - `make decorator`: Runs the Decorator pattern example (Coffee Shop)
 - `make chain`: Runs the Chain of Responsibility pattern example (Support System)
 - `make strategy`: Runs the Strategy pattern example (Payment Processing)
-- More patterns coming soon...
+- `make factory`: Runs the Factory Method pattern example (Document Processing)
 
 ## Design Patterns Included
 
@@ -95,5 +93,17 @@ Each pattern has its own make command to run its example:
      - Runtime strategy switching
      - Clean separation of payment algorithms
      - Easy addition of new payment methods
+
+5. **Factory Method Pattern**
+   - Implementation: Document Processing System
+   - Demonstrates: Creation of different types of documents
+   - Shows: How to delegate object creation to subclasses
+   - Location: `pattern/factory-method/Document.ts` and `pattern/factory-method/DocumentFactory.ts`
+   - Example: `pattern/factory-method/example.ts`
+   - Features:
+     - Abstract Document interface
+     - Multiple document types (PDF, Word, Text)
+     - Factory classes for each document type
+     - Common document processing workflow
 
 More patterns will be added soon... 
